@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('css/global.css', (req, res) => {
+app.get('/css/global.css', (req, res) => {
   res.setHeader('Content-Type', 'text/css');
   res.render('global.hbs',
    {
