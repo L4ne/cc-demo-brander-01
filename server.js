@@ -9,6 +9,7 @@ var app = express();
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 
+
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
@@ -26,7 +27,10 @@ app.use((req, res, next) => {
 //   res.render('maintenance.hbs');
 // });
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+
+app.use(express.static(__dirname + '/default'));
+
 
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
@@ -43,7 +47,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/global.css', (req, res) => {
+app.get('css/global.css', (req, res) => {
   res.setHeader('Content-Type', 'text/css');
   res.render('global.hbs',
    {
