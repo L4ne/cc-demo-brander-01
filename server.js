@@ -48,6 +48,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/css/global.css', (req, res) => {
+  res.setHeader('content-type', 'text/css');
   res.render('global.hbs',
    {
     ccdemo_Id:                  '00000001',
