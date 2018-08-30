@@ -7,6 +7,23 @@
 
  @import url(https://fonts.googleapis.com/css?family=Dosis&subset=latin-ext);
  :root {
+ 
+ /* Halfords Autocentre Colour Scheme - stored in Content Slot header-banner-m */
+     
+ /* 		
+     --hac-orange: #f49525;
+     --hac-grey: #333333;
+     --hac-grey-dark: #282828;
+     --hac-grey-medium: #6e6e6e;
+     --hac-grey-light: #f2f2f3;
+     --hac-green-dark: #2c8702;
+     --hac-green-light: #dcedd2;
+     --hac-purple: #7059a6;
+     --hac-red: #cb0904;
+     --hac-pink: #E83C66;
+     --hac-blue: #00b8e4;
+ 
+  */	
      --blue: #0070d2;
      --indigo: #6610f2;
      --purple: #6f42c1;
@@ -20,9 +37,9 @@
      --white: #fff;
      --gray: #6c757d;
      --gray-dark: #343a40;
-     --primary: #00a1e0;
+     --primary: #f49525;
      --secondary: #6c757d;
-     --success: #00882;
+     --success: #008827;
      --info: #17a2b8;
      --warning: #ffc107;
      --danger: #c00;
@@ -67,7 +84,9 @@
  main,
  nav,
  section {
-     display: block
+     display: block;
+     /* Nav Background */
+     background: var(--hac-grey);
  }
  
  body {
@@ -103,7 +122,8 @@
  
  p {
      margin-top: 0;
-     margin-bottom: 1rem
+     margin-bottom: 1rem;
+     color: var(--hac-grey);
  }
  
  abbr[title],
@@ -177,7 +197,7 @@
  }
  
  a {
-     color: #444;
+     color: var(--hac-orange);
      text-decoration: none;
      background-color: transparent;
      -webkit-text-decoration-skip: objects
@@ -2451,14 +2471,16 @@
  
  .btn-primary {
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange);
  }
  
  .btn-primary:hover {
      color: #fff;
-     background-color: #0086ba;
-     border-color: #007cad
+     /* background-color: #0086ba;
+     border-color: #007cad */
+     background-color: var(--hac-grey-dark);
+     border-color: var(--hac-grey-dark);
  }
  
  .btn-primary:focus,
@@ -2469,8 +2491,8 @@
  .btn-primary.disabled,
  .btn-primary:disabled {
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange);
  }
  
  .btn-primary:not(:disabled):not(.disabled):active,
@@ -2754,16 +2776,16 @@
  }
  
  .btn-outline-primary {
-     color: #00a1e0;
+     color: var(--hac-orange);
      background-color: transparent;
      background-image: none;
-     border-color: #00a1e0
+     border-color: var(--hac-orange)
  }
  
  .btn-outline-primary:hover {
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange)
  }
  
  .btn-outline-primary:focus,
@@ -2773,7 +2795,7 @@
  
  .btn-outline-primary.disabled,
  .btn-outline-primary:disabled {
-     color: #00a1e0;
+     color: var(--hac-orange);
      background-color: transparent
  }
  
@@ -2781,8 +2803,8 @@
  .btn-outline-primary:not(:disabled):not(.disabled).active,
  .show>.btn-outline-primary.dropdown-toggle {
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange)
  }
  
  .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -3303,7 +3325,7 @@
  .dropdown-item:active {
      color: #fff;
      text-decoration: none;
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .dropdown-item.disabled,
@@ -3628,7 +3650,7 @@
  
  .custom-control-input:checked~.custom-control-label::before {
      color: #fff;
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .custom-control-input:focus~.custom-control-label::before {
@@ -3686,7 +3708,7 @@
  }
  
  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
@@ -3694,7 +3716,7 @@
  }
  
  .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after {
@@ -3714,7 +3736,7 @@
  }
  
  .custom-radio .custom-control-input:checked~.custom-control-label::before {
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .custom-radio .custom-control-input:checked~.custom-control-label::after {
@@ -3914,7 +3936,7 @@
  .nav-pills .nav-link.active,
  .nav-pills .show>.nav-link {
      color: #fff;
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .nav-fill .nav-item {
@@ -4718,8 +4740,8 @@
  .page-item.active .page-link {
      z-index: 1;
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange)
  }
  
  .page-item.disabled .page-link {
@@ -4791,7 +4813,7 @@
  
  .badge-primary {
      color: #fff;
-     background-color: #00a1e0
+     background-color: var(--hac-orange)
  }
  
  .badge-primary[href]:hover,
@@ -5072,7 +5094,7 @@
      justify-content: center;
      color: #fff;
      text-align: center;
-     background-color: #00a1e0;
+     background-color: var(--hac-orange);
      transition: width 0.6s ease
  }
  
@@ -5159,8 +5181,8 @@
  .list-group-item.active {
      z-index: 2;
      color: #fff;
-     background-color: #00a1e0;
-     border-color: #00a1e0
+     background-color: var(--hac-orange);
+     border-color: var(--hac-orange)
  }
  
  .list-group-flush .list-group-item {
@@ -6029,7 +6051,7 @@
  }
  
  .bg-primary {
-     background-color: #00a1e0 !important
+     background-color: var(--hac-orange) !important
  }
  
  a.bg-primary:hover,
@@ -6165,7 +6187,7 @@
  }
  
  .border-primary {
-     border-color: #00a1e0 !important
+     border-color: var(--hac-orange) !important
  }
  
  .border-secondary {
@@ -8705,7 +8727,7 @@
  }
  
  .text-primary {
-     color: #00a1e0 !important
+     color: var(--hac-orange) !important
  }
  
  a.text-primary:hover,
@@ -8905,7 +8927,7 @@
  }
  
  .nav-tabs .nav-link.active {
-     border-bottom: 0.188em solid #00a1e0
+     border-bottom: 0.188em solid var(--hac-orange)
  }
  
  .card {
@@ -14130,7 +14152,7 @@
  }
  
  header~.container a:not(.btn-primary):not(.btn-outline-primary) {
-     color: #0070d2
+     color: var(--hac-orange)
  }
  
  .hide-order-discount {
@@ -14312,7 +14334,7 @@
  @media (max-width: 768.98px) {
      .menu-toggleable-left .bg-inverse {
          background-color: white !important;
-         color: #f49525;
+         color: var(--hac-orange);
      }
  }
  
@@ -14440,12 +14462,19 @@
      margin: 1.125em 0 0 0.5em
  }
  
+ /* Added for mini-cart */
+ .minicart a {
+     color: #fff;
+ }
+ 
+ 
  .navbar-header .user,
  .navbar-header .country-selector,
  .navbar-header .minicart,
  .navbar-header .navbar-toggler {
      line-height: 2.25em;
-     height: auto
+     height: auto;
+     color: #fff;
  }
  
  .navbar-header .navbar-toggler {
@@ -14490,7 +14519,7 @@
  }
  
  .brand img {
-     width: 100%
+     /* width: 60% */
  }
  
  @media (min-width: 992px) {
@@ -14510,11 +14539,11 @@
  }
  
  .main-menu {
-     background-color: #444
+     background-color: var(--hac-grey-dark);
  }
  
  .header-banner {
-     background-color: #f49525;
+     background-color: var(--hac-orange);
      text-align: center;
      color: #fff
  }
@@ -14529,7 +14558,7 @@
      color: #fff;
      width: 100%;
      height: 100%;
-     background-color: #00a1e0
+     background-color: var(--hac-grey-dark);
  }
  
  .header-banner .content {
@@ -14548,11 +14577,12 @@
  }
  
  .minicart a.minicart-link:hover {
-     text-decoration: none
+     text-decoration: none;
+     color: var(--hac-grey-light);
  }
  
  .minicart .minicart-quantity {
-     background-color: #00a1e0;
+     background-color: var(--hac-orange);
      border-radius: 50%;
      width: 1.25em;
      height: 1.25em;
@@ -14567,7 +14597,7 @@
  }
  
  a.normal {
-     color: #00a1e0;
+     color: var(--hac-orange);
      text-decoration: underline
  }
  
@@ -14601,7 +14631,7 @@
  }
  
  .valid-cookie-warning {
-     background-color: #0070d2;
+     background-color: var(--hac-orange);
      color: #fff;
      white-space: nowrap
  }
@@ -14962,7 +14992,7 @@
  }
  
  .hero h1.page-title {
-     top: 50%;
+     top: 77%;
      margin: -1em 0 0 0
  }
  
@@ -15000,7 +15030,7 @@
      position: relative;
      color: white;
      padding: 0.3125em 0.625em 0.3125em 15px;
-     background-color: #00a1e0;
+     background-color: var(--hac-orange);
      display: inline-block;
      margin: 0.9375em 0;
      font-size: 1.5rem
@@ -15020,7 +15050,7 @@
  
  h1.page-title::before {
      content: "";
-     background-color: #00a1e0;
+     background-color: var(--hac-orange);
      height: 100%;
      width: 0;
      position: absolute;
@@ -15088,7 +15118,7 @@
  }
  
  .price {
-     color: #f49525;
+     color: var(--hac-orange);
  }
  
  .price .strike-through {
@@ -15100,11 +15130,11 @@
  .price .starting,
  .price .range,
  .price .sales {
-     font-weight: bold;
+     font-weight: bold
  }
  
  .price .tiered {
-     color: #f49525;
+     color: var(--hac-orange);
  }
  
  .price .tiered table {
@@ -15212,7 +15242,7 @@
      border: 0.063em solid rgba(0, 0, 0, 0.3);
      width: 2.5em;
      height: 2.5em;
-     background: #0070d2;
+     background: var(--hac-orange);
      border-radius: 1.25em;
      display: block;
      position: relative
@@ -15226,9 +15256,9 @@
      border: 0.063em solid rgba(0, 0, 0, 0.3);
      width: 1.38em;
      height: 1.38em;
-     background: #0070d2;
+     background: var(--hac-orange);
      border-radius: .69em;
-     background-color: #0070d2;
+     background-color: var(--hac-orange);
      display: block;
      position: relative
  }
@@ -15945,7 +15975,7 @@
  
  .quick-view-dialog .modal-header .full-pdp-link,
  .choose-bonus-product-dialog .modal-header .full-pdp-link {
-     color: #00a1e0
+     color: var(--hac-orange)
  }
  
  .quick-view-dialog .modal-header .close,
@@ -16096,14 +16126,14 @@
  }
  
  .form-nav .nav-tabs .nav-link {
-     color: #333
+     color: var(--hac-grey)
  }
  
  .form-nav .nav-tabs .nav-link.active,
  .form-nav .nav-tabs .nav-link.active:focus,
  .form-nav .nav-tabs .nav-link.active:hover {
      background-color: #fff;
-     color: #333
+     color: var(--hac-grey)
  }
  
  .nav-tabs .nav-link.active {
@@ -16112,7 +16142,7 @@
  
  @media (min-width: 992px) {
      .form-nav .nav-item>.nav-link {
-         color: #333
+         color: var(--hac-grey)
      }
  }
  
@@ -16189,20 +16219,22 @@
  
  .item-attributes {
      vertical-align: top;
-     padding-left: 0
+     padding-left: 0;
+     color: var(--hac-grey);
  }
  
  .line-item-attributes,
  .line-item-option {
      font-size: 0.813rem;
-     margin: 0
+     margin: 0;
+     color: var(--hac-grey);
  }
  
  .line-item-name {
      text-overflow: ellipsis;
      white-space: nowrap;
      overflow: hidden;
-     color: #f49525;
+     color: var(--hac-orange);
      font-size: 1em;
      font-weight: bold;
      margin-bottom: 0.313em
@@ -16228,7 +16260,8 @@
  }
  
  .line-item-total-text {
-     font-size: 0.813em
+     font-size: 0.813em;
+     color: var(--hac-grey);
  }
  
  .pricing {
@@ -16417,7 +16450,7 @@
  
  .info-icon .icon {
      border-radius: 1.25rem;
-     background-color: #00a1e0;
+     background-color: var(--hac-orange);
      width: 1.5625rem;
      display: inline-block;
      text-align: center;
@@ -16540,7 +16573,7 @@
      border: 0.063em solid rgba(0, 0, 0, 0.3);
      width: 2.5em;
      height: 2.5em;
-     background: #0070d2;
+     background: var(--hac-orange);
      border-radius: 1.25em;
      display: block;
      position: relative
@@ -16554,9 +16587,9 @@
      border: 0.063em solid rgba(0, 0, 0, 0.3);
      width: 1.38em;
      height: 1.38em;
-     background: #0070d2;
+     background: var(--hac-orange);
      border-radius: .69em;
-     background-color: #0070d2;
+     background-color: var(--hac-orange);
      display: block;
      position: relative
  }
@@ -17061,4 +17094,99 @@
      position: absolute;
      top: 0.4em;
      width: 0.8em
+ }
+ 
+ 
+ 
+ /*!
+  * Halfords Autocentres v1.0.0 (https://klane-inside-eu03-dw.demandware.net/s/MobileFirst/)
+  * Copyright 2018 Salesforce Commerce Cloud
+  *  */
+ 
+ .ui-datepicker .ui-datepicker-header {
+     background: var(--hac-orange);
+ }
+ 
+ .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+     border: 1px solid var(--hac-orange);
+     background: var(--hac-orange);
+     font-weight: normal;
+     color: #454545;
+ }
+ 
+ header~.container a:not(.btn-primary):not(.btn-outline-primary) {
+     color: #454545;
+ }
+ 
+ .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+     border: 1px solid var(--hac-orange);
+     background: var(--hac-orange);
+     color: var(--hac-orange);
+ }
+ 
+ .content-page-image-mot {
+     background-image: url(../../images/mot-booking.jpg);
+ }
+ 
+ 
+ /* Reg Check */
+ 
+ 
+ .registration-ui {
+     background: linear-gradient(to bottom, #f8d038 0%,#f5ca2e 100%);
+     padding: .25em 1em .25em 1.75em;
+     font-weight: bold;
+     font-size: 2em;
+     border-radius: 5px;
+     border: 1px solid #000;
+     box-shadow: 1px 1px 1px #ddd;
+     position: relative;
+   font-family: helvetica, ariel, sans-serif;
+ }
+ 
+ .registration-ui:before {
+     content: 'GB';
+     display: block;
+     width: 30px;
+     height: 100%;
+     background: #063298;
+     position: absolute;
+     top: 0;
+     border-radius: 5px 0 0 5px;
+     color: #f8d038;
+     font-size: .5em;
+     line-height: 85px;
+     padding-left: 5px;
+ }
+ 
+ .registration-ui:after {
+     content: '';
+     display: block;
+     position: absolute;
+     top: 7px;
+     left: 5px;
+     width: 20px;
+     height: 20px;
+     border-radius: 30px;
+     border: 1px dashed #f8d038;
+ }
+ 
+ 
+ i.cardetails-icon {
+     font-size: 1em;
+     color: #fff;
+ }
+ 
+ .search.hidden-xs-down {
+     color: #fff;
+ }
+ 
+ .price .strike-through {
+     text-decoration: line-through;
+     color: #c40909;
+     margin-right: 0.938rem;
+ }
+ 
+ strong.availability {
+     color: var(--hac-green-dark);
  }
